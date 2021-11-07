@@ -1,0 +1,53 @@
+\documentclass[unicode,12pt,aspectratio=169]{beamer}
+\usetheme{v2SimpleStyle}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{docmute}
+\usepackage{graphicx}
+
+% テーマカラー
+\definecolor{themeColor}{HTML}{E03200}
+
+% レイアウト関連の設定（お好みで）
+\hyphenpenalty=10000
+\setlength\abovecaptionskip{0pt}
+
+% フォント設定（メイリオがない環境だと動かないと思う＝書き換えて）
+\usepackage{zxjatype}
+\renewcommand{\bfdefault}{bx}
+\setCJKmainfont[Scale=0.95]{Meiryo}
+\renewcommand\UrlFont{Meiryo}
+\setsansfont[
+    BoldFont={Meiryo Bold},
+    ItalicFont={Meiryo Italic},
+    BoldItalicFont={Meiryo Italic}
+]{Fira Sans}
+
+% 日本語化
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+
+% 情報（画像パスと出力するPDFの設定）
+\graphicspath{{images/}}
+\hypersetup{
+  pdftitle={北海道の回転寿司と100円寿司の違い},
+  pdfauthor={TomSuzuki}
+}
+
+% タイトル設定（書くことは英語の通り）
+\title{北海道の回転寿司と100円寿司の違い}
+\subtitle{The Difference Between Conveyor-Belt Sushi and 100 yen Sushi in Hokkaido}
+\author{TomSuzuki}
+\institute{2021年度 お寿司を語る会}
+\date{2021年11月7日}
+
+% 本体
+\begin{document}
+    \input{01_title}
+    \input{02_sample}
+    \input{03_100yen}
+    \input{04_hokkaido}
+    \input{05_summary}
+    \input{99_reference}
+\end{document}

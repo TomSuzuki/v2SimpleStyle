@@ -1,0 +1,128 @@
+%
+% name    : v2SimpleStyle
+% author  : TomSuzuki
+% version : 0.1.0
+%
+
+\ProvidesPackage{beamerthemev2SimpleStyle}[2021/11/04]
+
+\mode<presentation>
+
+% -------------------------------------
+% for text position
+% -------------------------------------
+\usepackage[absolute,overlay]{textpos}
+\usepackage{setspace}
+
+% -------------------------------------
+% setting
+% -------------------------------------
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{navigation symbols}{}
+
+% -------------------------------------
+% margin
+% -------------------------------------
+\renewcommand{\baselinestretch}{1.5}
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
+
+% -------------------------------------
+% color define
+% -------------------------------------
+\definecolor{colorWhite}{HTML}{EFF5F7}
+\definecolor{themeColor}{HTML}{555555}
+\definecolor{textDarkGray}{HTML}{333333}
+\definecolor{textLightGray}{HTML}{AAAAAA}
+
+% -------------------------------------
+% color setting
+% -------------------------------------
+\setbeamercolor{palette primary}{bg=colorWhite, fg=themeColor}
+\setbeamercolor{palette secondary}{bg=themeColor, fg=colorWhite}
+\setbeamercolor{palette tertiary}{bg=themeColor, fg=colorWhite}
+\setbeamercolor{palette quaternary}{bg=textDarkGray, fg=colorWhite}
+\setbeamercolor{title}{parent=palette primary}
+\setbeamercolor{subtitle}{parent=palette primary}
+\setbeamercolor{author}{parent=palette primary}
+\setbeamercolor{institute}{fg=textLightGray}
+\setbeamercolor{date}{fg=textLightGray}
+\setbeamercolor{frametitle}{fg=textDarkGray}
+\setbeamercolor{section title}{parent=paletter secondary}
+\setbeamercolor{section in toc}{parent=palette primary}
+\setbeamercolor{background canvas}{parent=palette primary}
+\setbeamercolor{normal text}{fg=textDarkGray}
+\setbeamercolor{item}{fg=textDarkGray}
+\setbeamercolor{alerted text}{fg=themeColor}
+\setbeamercolor{block title}{parent=palette tertiary}
+\setbeamercolor{block body}{parent=palette quaternary}
+\setbeamercolor{block title example}{bg=textDarkGray, fg=colorWhite}
+\setbeamercolor{block body example}{parent=palette quaternary}
+\setbeamercolor{block title alerted}{bg=textDarkGray, fg=colorWhite}
+\setbeamercolor{block body alerted}{parent=palette quaternary}
+\setbeamercolor{page number in head/foot}{fg=textLightGray}
+\setbeamercolor{structure}{fg=textDarkGray}
+
+% -------------------------------------
+% fonts setting
+% -------------------------------------
+\setbeamerfont{title}{size=\fontsize{20}{20}, series=\bf}
+\setbeamerfont{subtitle}{size=\fontsize{9}{9}, series=\bf}
+\setbeamerfont{author}{size=\fontsize{10}{10}, series=\bf}
+\setbeamerfont{institute}{size=\fontsize{9}{9}, series=\bf}
+\setbeamerfont{date}{size=\fontsize{7}{7}, series=\bf}
+\setbeamerfont{frametitle}{size=\fontsize{14}{14}, series=\bf}
+\setbeamerfont{section title}{size=\fontsize{25}{25}, series=\bf}
+\setbeamerfont{section in toc}{size=\fontsize{13}{13}, series=\bf}
+\setbeamerfont{caption}{size=\fontsize{7}{7}}
+\setbeamerfont{url}{size=\fontsize{6}{6}}
+\setbeamerfont{item}{}
+\setbeamerfont{alerted text}{size=\fontsize{14}{14}, series=\bf}
+\setbeamerfont{block title}{series=\bf}
+\setbeamerfont{block body}{series=\bf}
+\setbeamerfont{block title example}{series=\bf}
+\setbeamerfont{block body example}{series=\bf}
+\setbeamerfont{block title alerted}{series=\bf}
+\setbeamerfont{block body alerted}{series=\bf}
+\setbeamerfont{page number in head/foot}{}
+
+% -------------------------------------
+% frame title
+% -------------------------------------
+\setbeamertemplate{frametitle}{
+    \vspace{-0.2ex}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.0cm,dp=0.75cm,leftskip=0.5cm,rightskip=0.25cm]{frametitle}
+        \usebeamerfont{frametitle}\MakeUppercase{\insertframetitle}
+    \end{beamercolorbox}
+}
+
+% -------------------------------------
+% itemize bullets
+% -------------------------------------
+\newcommand{\simpleBullet}{•}
+\setbeamertemplate{itemize item}{\simpleBullet}
+\setbeamertemplate{itemize subitem}{\simpleBullet}
+\setbeamertemplate{itemize subsubitem}{\simpleBullet}
+
+% -------------------------------------
+% page bottom text
+% -------------------------------------
+\newcommand{\pagereference}[1][]{
+    \begin{textblock*}{\textwidth}[0,1](0.5cm, 8.5cm)
+        \begin{spacing}{0.9}
+            \raggedright{\scriptsize \textcolor[rgb]{0.6, 0.6, 0.6}{#1}}
+        \end{spacing}
+    \end{textblock*}
+}
+
+% -------------------------------------
+% footline
+% -------------------------------------
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline} {
+    \begin{beamercolorbox}[wd=\textwidth,ht=0.5cm,dp=0.175cm,leftskip=0.25cm,rightskip=0.25cm]{structure}
+    \hfill\usebeamerfont{page number in head/foot}
+    \insertframenumber
+    \end{beamercolorbox}
+}
+
+\mode<all>
