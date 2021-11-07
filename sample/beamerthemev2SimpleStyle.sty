@@ -1,7 +1,7 @@
 %
 % name    : v2SimpleStyle
 % author  : TomSuzuki
-% version : 0.1.0
+% version : 0.1.1
 %
 
 \ProvidesPackage{beamerthemev2SimpleStyle}[2021/11/04]
@@ -13,12 +13,6 @@
 % -------------------------------------
 \usepackage[absolute,overlay]{textpos}
 \usepackage{setspace}
-
-% -------------------------------------
-% setting
-% -------------------------------------
-\setbeamertemplate{caption}[numbered]
-\setbeamertemplate{navigation symbols}{}
 
 % -------------------------------------
 % margin
@@ -47,18 +41,10 @@
 \setbeamercolor{institute}{fg=textLightGray}
 \setbeamercolor{date}{fg=textLightGray}
 \setbeamercolor{frametitle}{fg=textDarkGray}
-\setbeamercolor{section title}{parent=paletter secondary}
-\setbeamercolor{section in toc}{parent=palette primary}
 \setbeamercolor{background canvas}{parent=palette primary}
 \setbeamercolor{normal text}{fg=textDarkGray}
 \setbeamercolor{item}{fg=textDarkGray}
 \setbeamercolor{alerted text}{fg=themeColor}
-\setbeamercolor{block title}{parent=palette tertiary}
-\setbeamercolor{block body}{parent=palette quaternary}
-\setbeamercolor{block title example}{bg=textDarkGray, fg=colorWhite}
-\setbeamercolor{block body example}{parent=palette quaternary}
-\setbeamercolor{block title alerted}{bg=textDarkGray, fg=colorWhite}
-\setbeamercolor{block body alerted}{parent=palette quaternary}
 \setbeamercolor{page number in head/foot}{fg=textLightGray}
 \setbeamercolor{structure}{fg=textDarkGray}
 
@@ -71,26 +57,17 @@
 \setbeamerfont{institute}{size=\fontsize{9}{9}, series=\bf}
 \setbeamerfont{date}{size=\fontsize{7}{7}, series=\bf}
 \setbeamerfont{frametitle}{size=\fontsize{14}{14}, series=\bf}
-\setbeamerfont{section title}{size=\fontsize{25}{25}, series=\bf}
-\setbeamerfont{section in toc}{size=\fontsize{13}{13}, series=\bf}
 \setbeamerfont{caption}{size=\fontsize{7}{7}}
 \setbeamerfont{url}{size=\fontsize{6}{6}}
-\setbeamerfont{item}{}
 \setbeamerfont{alerted text}{size=\fontsize{14}{14}, series=\bf}
-\setbeamerfont{block title}{series=\bf}
-\setbeamerfont{block body}{series=\bf}
-\setbeamerfont{block title example}{series=\bf}
-\setbeamerfont{block body example}{series=\bf}
-\setbeamerfont{block title alerted}{series=\bf}
-\setbeamerfont{block body alerted}{series=\bf}
 \setbeamerfont{page number in head/foot}{}
 
 % -------------------------------------
 % frame title
 % -------------------------------------
 \setbeamertemplate{frametitle}{
-    \vspace{-0.2ex}
-    \begin{beamercolorbox}[wd=\paperwidth,ht=1.0cm,dp=0.75cm,leftskip=0.5cm,rightskip=0.25cm]{frametitle}
+    \vspace{-0.125cm}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.0cm,dp=0.5cm,leftskip=0.5cm,rightskip=0.25cm]{frametitle}
         \usebeamerfont{frametitle}\MakeUppercase{\insertframetitle}
     \end{beamercolorbox}
 }
@@ -124,5 +101,11 @@
     \insertframenumber
     \end{beamercolorbox}
 }
+
+% -------------------------------------
+% other setting
+% -------------------------------------
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{navigation symbols}{}
 
 \mode<all>
